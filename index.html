@@ -14,12 +14,61 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" />
   <title>Mappir Dev — Geospatial Intelligence &amp; Technology</title>
+  <link rel="canonical" href="__SITE_URL__/" />
+  <meta property="og:url" content="__SITE_URL__/" />
+  <meta property="og:site_name" content="Mappir Dev" />
+  <meta name="twitter:card" content="summary" />
+  <!-- Site-wide structured data — visible to crawlers without JavaScript -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "__SITE_URL__/#org",
+        "name": "Mappir Dev",
+        "url": "__SITE_URL__/",
+        "description": "GIS development, precision drone and land surveys, cadastral mapping and intelligent software for governments, infrastructure firms and enterprises.",
+        "email": "mappirdev@gmail.com",
+        "telephone": "+92-334-5017980",
+        "foundingDate": "2012",
+        "areaServed": "Worldwide",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rawalpindi",
+          "addressCountry": "PK",
+          "streetAddress": "PWD, Rawalpindi"
+        },
+        "knowsAbout": ["Geographic Information Systems", "Cadastral mapping", "Land surveying", "Drone photogrammetry", "Remote sensing", "IoT"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "__SITE_URL__/#website",
+        "url": "__SITE_URL__/",
+        "name": "Mappir Dev",
+        "publisher": { "@id": "__SITE_URL__/#org" }
+      }
+    ]
+  }
+  </script>
+  <!-- SPA deep-link restore for GitHub Pages (paired with public/404.html) -->
+  <script>
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
 </head>
-
 
 <body>
   <div id="root"></div>
+  <noscript>Mappir Dev — geospatial intelligence &amp; technology. Please enable JavaScript to view this site.</noscript>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

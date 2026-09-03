@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mappir Dev</title>
+  <script>
+    // GitHub Pages SPA fallback. On a deep-link 404, stash the requested URL
+    // and bounce to the app root; index.html restores it via the History API.
+    // For a project-page deploy (user.github.io/<repo>/) set segmentsToKeep = 1.
+    (function () {
+      var segmentsToKeep = 0;
+      var l = window.location;
+      sessionStorage.redirect = l.href;
+      var base =
+        l.pathname.split('/').slice(0, 1 + segmentsToKeep).join('/') + '/';
+      l.replace(l.origin + base);
+    })();
+  </script>
+</head>
+
+<body></body>
+
+</html>

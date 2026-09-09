@@ -4,6 +4,7 @@ import { Icon } from "../lib/icons";
 import { IMG } from "../data/images";
 import { useMediaQuery } from "../lib/hooks";
 import HeroMap from "../components/HeroMap";
+import Reviews from "../components/Reviews";
 import { AnimSection, Eyebrow, Stat, LinkMore, Btn } from "../components/primitives";
 import { TrustStrip, CtaBand, SectionHead } from "../components/page-parts";
 import { SERVICES } from "../data/services";
@@ -11,7 +12,7 @@ import { SURVEYS } from "../data/surveys";
 import { INDUSTRIES } from "../data/industries";
 import { WORK } from "../data/work";
 import { INSIGHTS } from "../data/insights";
-import { STATS, STEPS, TESTIMONIALS } from "../data/company";
+import { STATS, STEPS } from "../data/company";
 
 export default function Home() {
   const isDesktop = useMediaQuery("(min-width: 960px)");
@@ -28,7 +29,7 @@ export default function Home() {
         <div className="hero__scrim" aria-hidden="true" />
         <div className="container hero__grid">
           <div className="hero__copy">
-            <Eyebrow light>Geospatial Intelligence &amp; Technology</Eyebrow>
+            <Eyebrow>Geospatial Intelligence &amp; Technology</Eyebrow>
             <h1 className="hero__title">
               Mapping the world&rsquo;s data with <span>precision</span>.
             </h1>
@@ -41,7 +42,7 @@ export default function Home() {
               <Btn to="/services" variant="primary">
                 Explore services <Icon name="arrowRight" size={17} />
               </Btn>
-              <Btn to="/contact" variant="light">
+              <Btn to="/contact" variant="ghost">
                 Talk to an expert
               </Btn>
             </div>
@@ -276,36 +277,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
-      <section className="section section--alt">
-        <div className="container">
-          <SectionHead eyebrow="Client voices" title="Trusted on complex mandates" />
-          <div className="grid-3">
-            {TESTIMONIALS.map((t, i) => (
-              <AnimSection key={t.name} delay={(i % 3) * 90}>
-                <figure className="quote-card">
-                  <Icon name="quote" size={24} />
-                  <blockquote>{t.quote}</blockquote>
-                  <figcaption>
-                    <span className="avatar">
-                      {t.name
-                        .replace(/[^A-Za-z .]/g, "")
-                        .split(" ")
-                        .map((w) => w[0])
-                        .join("")
-                        .slice(0, 2)}
-                    </span>
-                    <span>
-                      <strong>{t.name}</strong>
-                      <em>{t.role}</em>
-                    </span>
-                  </figcaption>
-                </figure>
-              </AnimSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── REVIEWS ── */}
+      <Reviews />
 
       {/* ── INSIGHTS ── */}
       <section className="section">

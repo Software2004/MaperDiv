@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Icon } from "../lib/icons";
 import { Logo } from "./primitives";
-import { useScrolled } from "../lib/hooks";
 import { NAV } from "../data/site";
 
 function MegaPanel({ item, onNavigate }) {
@@ -56,7 +55,6 @@ function MegaPanel({ item, onNavigate }) {
 }
 
 export default function Nav() {
-  const scrolled = useScrolled(24);
   const location = useLocation();
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -65,8 +63,9 @@ export default function Nav() {
   const navRef = useRef(null);
   const closeTimer = useRef(null);
 
-  const isHome = location.pathname === "/";
-  const solid = scrolled || mobileOpen || openMenu || !isHome;
+  // The nav now sits on light surfaces sitewide (incl. the light home hero),
+  // so it is always in its solid state.
+  const solid = true;
 
   // close every menu when the route changes (incl. browser back/forward)
   if (location.pathname !== lastPath) {

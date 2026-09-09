@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Icon } from "../lib/icons";
 import { BRAND_SHAPES } from "../lib/icon-data";
 import { useInView, useCountUp } from "../lib/hooks";
+import logoMark from "../assets/logo.jpeg";
 
 /* Reveal-on-scroll wrapper. Resting state is visible; it only animates
    in from a slight offset when it first enters the viewport. */
@@ -74,9 +75,7 @@ export function LinkMore({ children = "Learn more", to, href, onClick, light = f
 export function Logo({ light = false }) {
   return (
     <span className={`logo${light ? " logo--light" : ""}`} aria-label="Mappir Dev">
-      <span className="logo__mark">
-        <Icon name="layers" size={22} stroke={2} />
-      </span>
+      <img className="logo__img" src={logoMark} alt="Mappir Dev" width="40" height="40" />
       <span className="logo__text">
         MAPPIR<span className="logo__accent">DEV</span>
       </span>

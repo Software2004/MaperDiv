@@ -84,7 +84,7 @@ button{font-family:inherit}
 /* logo */
 .logo{display:inline-flex;align-items:center;gap:11px;color:var(--ink)}
 .logo--light{color:#fff}
-.logo__img{width:40px;height:40px;border-radius:4px;object-fit:contain;background:#000;flex:none;display:block}
+.logo__img{width:40px;height:40px;border-radius:4px;object-fit:contain;flex:none;display:block}
 .logo__text{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:.04em;color:inherit}
 .logo__accent{color:var(--brand);margin-left:.28em}
 .logo--light .logo__accent{color:var(--brand-bright)}
